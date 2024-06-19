@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* div.search {padding: 20px 0} */
+form {
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.search-container {
+  background: #7ba7ab00;
+  text-align: center;
+  top: 0px;
+  left: 2%;
+  position: fixed;
+  z-index: 100;
+}
+
+/* .search-container:after {content:""; clear:both; display:table} */
+.search-container form {
+  width: auto;
+  float: left;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+.search-container input {
+  width: 300px;
+  height: 42px;
+  padding-left: 15px;
+  padding-top: 0;
+  border-radius: 42px;
+  border: 2px solid #000000;
+  background: #f9f0da7c;
+  outline: none;
+  position: relative;
+  color: #000000;
+
+  /* transition: .3s linear; */
+}
+
+.search-container input[type=text] {
+  /* width: 100%;
+  height: 100%; */
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+/* .search-container input:focus {
+  width: 500px;
+} */
+.search-container button {
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.search-container button:hover {
+  background-color: #5d5d605a;
+  border-radius: 40px;
+  /* border-right: 40px;
+  border-top-right-radius: 40px; */
+}
+
+.search-container button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  color: #324b4e;
+}
+
+.viewer-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #ccc;
+}
+
+:deep(.cesium-viewer-toolbar) {
+  width: 50px;
+  height: 80px;
+  display:grid;
+  top: 80%;
+  position: absolute;
+
+}
+:deep(.cesium-sceneModePicker-visible){
+  right: 40px;
+}
