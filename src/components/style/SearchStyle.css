@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* div.search {padding: 20px 0} */
+form {
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.search-container {
+  width: 300px;
+  height: 42px;
+  background: #7ba7ab00;
+  text-align: center;
+  top: 20px;
+  left: 2%;
+  position: fixed;
+  z-index: 100;
+}
+
+/* .search-container:after {content:""; clear:both; display:table} */
+.search-container form {
+  width: auto;
+  float: left;
+  margin-right: 30px;
+  margin-top: 0px;
+}
+
+.search-container input {
+  width: 300px;
+  height: 42px;
+  padding-left: 15px;
+  padding-top: 0;
+  border-radius: 42px;
+  border: 2px solid #000000;
+  background: #f9f0da7c;
+  outline: none;
+  position: relative;
+  color: #000000;
+  flex: 1;
+  padding-right: 30px;
+  /* 为删除按钮留出空间 */
+  z-index: 2;
+
+  /* transition: .3s linear; */
+}
+
+.search-container input[type=text] {
+  /* width: 100%;
+  height: 100%; */
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+/* .search-container input:focus {
+  width: 500px;
+} */
+.search-container button[type="submit"] {
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-image: url("../../assets/search.svg");
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-position: center;
+  z-index: 3;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #5d5d605a;
+  border-radius: 40px;
+  /* border-right: 40px;
+  border-top-right-radius: 40px; */
+}
+
+.clear-button {
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 2px;
+  right: 30px;
+  z-index: 3;
+  /* background-image: url("../../assets/search.svg");
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-position: center; */
+}
+
+.result-span {
+  width: 300px;
+  height: 22px;
+
+  margin: auto;
+}
+
+.result-span-left {
+  top: 0;
+  width: 20px;
+  height: 22px;
+  /* border-radius:0px 00px 0px 0px; */
+  background-image: radial-gradient(20px at top right, #ffffff00 20px, rgba(255, 255, 255, 0.5));
+  z-index: 1;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+.result-span-right {
+  top: 20px;
+  left: 280px;
+  position: absolute;
+  width: 20px;
+  height: 22px;
+  /* border-radius:0px 00px 0px 0px; */
+  background-image: radial-gradient(20px at top left, #ffffff00 20px, rgba(255, 255, 255, 0.5));
+  z-index: 1;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+.locate-button {
+  margin: 0px;
+  padding-top: 0px;
+  width: 30px;
+  height: 36px;
+  position: absolute;
+  left: 270px;
+  border: #00000000;
+  background-color: #00000000;
+}
+
+.locate-button:hover {
+  background-color: #393838c9;
+}
+
+:deep(.result-container) {
+  border-radius: 40px;
+  padding-top: 20px;
+  top: 40px;
+}
+
+/* .search-container button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  color: #324b4e;
+} */
+
+
+/* 添加一些简单的样式 */
+ul {
+  list-style-type: none;
+  padding: 0 0;
+  z-index: 1;
+}
+
+li {
+  padding: 0x 0;
+  height: 36px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 36px;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* 初始背景透明 */
+
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: rgba(255, 255, 255, 1);
+  /* 悬停时背景不透明 */
+}
+
+.viewer-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #ccc;
+}
+.result-item span{
+  display: inline-block;
+  width: 300px;
+}
+/* :deep(.cesium-viewer-toolbar) {
+  width: 500px;
+  height: 80px;
+  display:grid;
+  top: 60%;
+  position: absolute;
+
+} */

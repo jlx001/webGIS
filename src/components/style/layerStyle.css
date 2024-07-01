@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+.treeDiv{
+position:absolute;
+z-index: 10;
+width: 300px;
+height: 80vh;
+right: 0px;
+top:60px;
+border: 1px;
+border-radius: 10px;
+background-color: rgba(43, 64, 64, 0.559);
+}
