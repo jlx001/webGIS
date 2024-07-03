@@ -1,18 +1,100 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  position: absolute;
+  height: 20px;
+  font-size: 20px;
+  left: 10px;
+  top:8px;
+  color: azure;
+  display: flex;
   
-  body {
-    margin: 0;
-  }
-.treeDiv{
-position:absolute;
-z-index: 10;
-width: 300px;
-height: 80vh;
-right: 0px;
-top:60px;
-border: 1px;
-border-radius: 10px;
-background-color: rgba(43, 64, 64, 0.559);
+}
+
+.treeDiv {
+  position: absolute;
+  z-index: 10;
+  width: 300px;
+  height: 80vh;
+  right: 0px;
+  top: 60px;
+  border: 1px;
+  border-radius: 10px;
+  background-color: rgba(43, 64, 64, 0.773);
+  flex: 1;
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-right: 8px;
+}
+.title-div{
+  position: absolute;
+  width: 300px;
+  height: 30px;
+}
+.add-button{
+  position: absolute;
+  right:130px;
+  top:6px;
+  width: 60px;
+  height:30px;
+  border: 1px;
+  border-radius: 6px;
+  color: aliceblue;
+  background-color: rgb(20, 149, 213);
+}
+.add-button:hover{
+  cursor:pointer;
+  background-color: rgba(20, 149, 213, 0.914);
+}
+
+/*点击*/
+/* .add-button:active{
+  box-shadow: none;
+  opacity: 0.4;
+  transition: 0s; 
+} */
+
+.close-button{
+  position: absolute;
+  right:4px;
+  top:8px;
+  width: 20px;
+  height:20px;
+  background-color: rgba(43, 64, 64, 0);
+  color:aliceblue;
+}
+.close-button:hover{
+  cursor:pointer;
+}
+:deep(.url-form){
+  display: flex;
+  justify-content: flex-start;
+  /* text-align: center; */
+  line-height: 30px;
+  margin: 8px;
+}
+:deep(.el-input__wrapper){
+  width: 500px;
+  flex-grow:0;
+}
+
+
+:deep(.el-tree) {
+  top:40px;
+  background-color: rgba(240, 248, 255, 0);
+  color: aliceblue;
+  --el-tree-node-content-height: 30px;
+  --el-tree-node-hover-bg-color:rgba(174, 188, 199, 0.468);
+}
+:deep(.edit-bar:hover){
+  color: rgb(0, 140, 255, 0.927);
+
 }

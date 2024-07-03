@@ -1,107 +1,182 @@
 <template>
   <div class="treeDiv">
-    <div data-v-6ca2f2a6="" class="mars-dialog manage-basemap-pannel fadein-left"
-      style="width: 380px; z-index: 900; left: 50px; top: 50px;">
-      <div data-v-6ca2f2a6="" class="mars-dialog__header" style="cursor: move;"><!----><span data-v-6ca2f2a6=""
-          class="title">底图</span><span data-v-3d495c36="" data-v-6ca2f2a6=""
-          class="mars-icon close-btn"><!--?xml version="1.0" encoding="UTF-8"?--><svg width="18" height="18"
-            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 8L40 40" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-            </path>
-            <path d="M8 40L40 8" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-            </path>
-          </svg></span></div>
-      <div data-v-6ca2f2a6="" class="mars-dialog__content"
-        style="height: calc(100% - 80px); border-radius: 0px !important; padding-bottom: 0px;">
-        <ul data-v-09b4be11="" class="basemap">
-          <li data-v-09b4be11="" class="basemap-card active-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" :src="getAssetsFile('img/google_img.png')"></div>
-            <div data-v-09b4be11="">谷歌影像</div>
-          </li>
-          <!-- <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/tdt_img.png"></div>
-            <div data-v-09b4be11="">天地图影像</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/tdt_vec.png"></div>
-            <div data-v-09b4be11="">天地图电子</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/gaode_img.png"></div>
-            <div data-v-09b4be11="">高德影像</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/gaode_vec.png"></div>
-            <div data-v-09b4be11="">高德电子</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/bd-img.png"></div>
-            <div data-v-09b4be11="">百度影像</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/bd-vec.png"></div>
-            <div data-v-09b4be11="">百度电子</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/tencent_img.png"></div>
-            <div data-v-09b4be11="">腾讯影像</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/tencent_vec.png"></div>
-            <div data-v-09b4be11="">腾讯电子</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/esriWorldImagery.png"></div>
-            <div data-v-09b4be11="">ArcGIS影像</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/bingAerial.png"></div>
-            <div data-v-09b4be11="">微软影像</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/blackMarble.png"></div>
-            <div data-v-09b4be11="">暗色底图</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/bd-c-midnight.png"></div>
-            <div data-v-09b4be11="">蓝色底图</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/bd-c-dark.png"></div>
-            <div data-v-09b4be11="">黑色底图</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/google_img.png"></div>
-            <div data-v-09b4be11="">离线影像地图 (供参考)</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/offline.png"></div>
-            <div data-v-09b4be11="">单张图片 (本地离线)</div>
-          </li>
-          <li data-v-09b4be11="" class="basemap-card">
-            <div data-v-09b4be11=""><img data-v-09b4be11="" class="icon" src="/img/basemaps/null.png"></div>
-            <div data-v-09b4be11="">无底图</div>
-          </li> -->
-        </ul>
-      </div><!---->
-      <div data-v-6ca2f2a6="" class="mars-dialog__footer"><button data-v-a3bdf791="" data-v-09b4be11=""
-          class="mars-switch ant-switch-checked ant-switch css-19iuou" type="button" role="switch" aria-checked="true">
-          <div class="ant-switch-handle"><!----></div><span class="ant-switch-inner"><span
-              class="ant-switch-inner-checked"><!----></span><span
-              class="ant-switch-inner-unchecked"><!----></span></span>
-        </button><span data-v-09b4be11="" class="f-ml">显示地形</span></div>
-      <div data-v-6ca2f2a6="" class="mars-dialog__handle handle-l"></div>
-      <div data-v-6ca2f2a6="" class="mars-dialog__handle handle-r"></div>
-      <div data-v-6ca2f2a6="" class="mars-dialog__handle handle-t"></div>
-      <div data-v-6ca2f2a6="" class="mars-dialog__handle handle-b"></div>
-      <div data-v-6ca2f2a6="" class="mars-dialog__handle handle-lb"></div>
-      <div data-v-6ca2f2a6="" class="mars-dialog__handle handle-rb"></div>
+    <div class="title-div">
+      <p>图层管理</p>
+      <el-button class="add-button" @click="openDemoDialog" type="primary" name="button">新增</el-button>
+      <a class="close-button" @click="closeDialog">X</a>
     </div>
+
+    <el-tree style="max-width: 600px" :data="dataSource" show-checkbox node-key="id" default-expand-all
+      :expand-on-click-node="false" :render-content="renderContent" />
   </div>
+  <AddLayerDialog ref="demoDialogRef" @confirm="handleOnConfirm"></AddLayerDialog>
 </template>
 
 <script setup lang='ts'>
-import { getAssetsFile } from '@/utils/images';
+import { ref } from 'vue'
+// import { getAssetsFile } from '@/utils/images';
+import AddLayerDialog from './AddLayerDialog.vue';
+import type Node from 'element-plus/es/components/tree/src/model/node'
+
+// function addLayer(){
+//   // return null;
+//   alert(`add`);
+//   AddLayer.show=true
+// };
+let demoDialogRef = ref()
+// 通过ref调用子组件的方法
+const openDemoDialog = () => {
+  // 可以通过openDialog方法向弹窗内部传递参数，如弹窗要展示的数据
+  demoDialogRef.value.openDialog({ title:'新增图层',data: { name: '小白很白' } })
+}
+// 在弹窗里点击提交
+const handleOnConfirm = (data) => {
+  alert('新建成功');
+  console.log('data', data);
+}
+
+function closeDialog() {
+  alert(`close`);
+}
+
+interface Tree {
+  id: number
+  label: string
+  rootNode: boolean
+  children?: Tree[]
+}
+let id = 1000
+
+const append = (data: Tree) => {
+  const newChild = { id: id++, label: 'testtest', rootNode: false, children: [] }
+  if (!data.children) {
+    data.children = []
+  }
+  data.children.push(newChild)
+  dataSource.value = [...dataSource.value]
+}
+
+const remove = (node: Node, data: Tree) => {
+  const parent = node.parent
+  const children: Tree[] = parent.data.children || parent.data
+  const index = children.findIndex((d) => d.id === data.id)
+  children.splice(index, 1)
+  dataSource.value = [...dataSource.value]
+}
+
+const renderContent = (
+  h,
+  {
+    node,
+    data,
+    store,
+  }: {
+    node: Node
+    data: Tree
+    store: Node['store']
+  }
+) => {
+  if (!data.rootNode) {
+    return h(
+      'span',
+      {
+        class: 'custom-tree-node',
+      },
+      h('span', null, node.label),
+      h(
+        'span',
+        null,
+        h(
+          'a',
+          {
+            class: 'edit-bar',
+            style: 'position: absolute;right:50px',
+            onClick: () => append(data),
+          },
+          '编辑'
+        ),
+        h(
+          'a',
+          {
+            class: 'edit-bar',
+            style: 'position: absolute;right:10px',
+            onClick: () => remove(node, data),
+          },
+          '删除'
+        )
+      )
+    )
+  }
+  else {
+    return h(
+      'span',
+      {
+        class: 'custom-tree-node',
+      },
+      h('span', null, node.label))
+  }
+}
+
+const dataSource = ref<Tree[]>([
+  {
+    id: 1,
+    label: '影像',
+    rootNode: true,
+    children: [
+      {
+        id: 4,
+        label: 'Level two 1-1',
+        rootNode: false,
+        children: [
+          {
+            id: 9,
+            label: 'Level three 1-1-1',
+            rootNode: false,
+          },
+          {
+            id: 10,
+            label: 'Level three 1-1-2',
+            rootNode: false,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    label: 'Level one 2',
+    rootNode: true,
+    children: [
+      {
+        id: 5,
+        label: 'Level two 2-1',
+        rootNode: false,
+      },
+      {
+        id: 6,
+        label: 'Level two 2-2',
+        rootNode: false,
+      },
+    ],
+  },
+  {
+    id: 3,
+    label: 'Level one 3',
+    rootNode: true,
+    children: [
+      {
+        id: 7,
+        label: 'Level two 3-1',
+        rootNode: false,
+      },
+      {
+        id: 8,
+        label: 'Level two 3-2',
+        rootNode: false,
+      },
+    ],
+  },
+])
 </script>
 
 <style scoped>
